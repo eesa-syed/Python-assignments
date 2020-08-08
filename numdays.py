@@ -1,0 +1,6 @@
+date=input("input date in 'YYYY,MM,DD' format :")
+y = int(date[0:4])
+m = int(date[5:7])
+d = int(date[8:10])
+nd=(d+(m-1)*31+((m-1)>=2)*-3+((m-1)>=4)*-1+((m-1)>=6)*-1+((m-1)>=9)*-1+((m-1)>=11)*-1)+1*(y%4==0 or y%100==0)
+print(nd)
